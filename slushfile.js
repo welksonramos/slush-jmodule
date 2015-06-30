@@ -12,7 +12,8 @@
  conflict = require('gulp-conflict'),
  template = require('gulp-template'),
  inquirer = require('inquirer'),
- rename = require('gulp-rename');
+ rename = require('gulp-rename'),
+ replace = require('gulp-regex-replace');
 
  function format(string){
  	var username = string ? string.toLowerCase() : '';
@@ -58,10 +59,17 @@ return {
  		gulp.src(__dirname + '/templates/**')
  		.pipe(template(answers))
  		.pipe(rename(function(file){
- 			if(file.basename === "mod_slush_jmodule"){
+ 			if(file.basename === 'mod_slush_jmodule'){
  				file.basename = defaults.moduleName;
  			}
+ 			if(file.basename === 'en-GB.mod_slush_jmodule'){
+ 				file.basename = 'en-GB.'+defaults.moduleName;
+ 			}
+ 			if(file.basename === 'pt-BR.mod_slush_jmodule'){
+ 				file.basename = 'pt-BR.'+defaults.moduleName;
+ 			}
  		}))
+ 		.pipe(replace({regex:'mod_slush_jmodule', replace: defaults.moduleName}))
  		.pipe(conflict('./'))
  		.pipe(gulp.dest('./'))
  		.pipe(install())
