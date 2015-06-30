@@ -1,0 +1,36 @@
+{
+  "name": "slush-jmodule",
+  "version": "0.1.0",
+  "description": "A simple slush generator for creation modules Joomla",
+  "main": "slushfile.js",
+  "repository": {
+    "type":"git",
+    "https://github.com/welksonramos/slush-jmodule.git"
+    },
+    "bugs":{
+      "url":"https://github.com/welksonramos/slush-jmodule/issues"
+      },
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "keywords": [
+        "slushgenerator",
+        "joomla",
+        "module"
+        ],
+        "author": "Welkson Ramos <welksonr@hotmail.com>",
+        "license": {
+          "type":"MIT",
+          "url":"raw.github.com/welksonramos/slush-jmodule/LICENSE"
+
+          },
+        "dependencies": {
+          "gulp": "^3.9.0",
+          "gulp-conflict": "^0.4.0",
+          "gulp-install": "^0.4.0",
+          "gulp-rename": "^1.2.2",
+          "gulp-template": "^3.0.0",
+          "iniparser": "^1.0.5",
+          "inquirer": "^0.8.5"
+        }
+      }
