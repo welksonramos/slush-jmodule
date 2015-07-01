@@ -17,7 +17,7 @@
 
 defined('_JEXEC') or die('Access Restricted');
 
-require_once dirname(__FILE__) . '/helper.php';
+// require_once dirname(__FILE__) . '/helper.php';
 
 $doc = JFactory::getDocument();
 
