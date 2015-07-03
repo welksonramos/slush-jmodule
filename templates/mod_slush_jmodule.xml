@@ -11,10 +11,8 @@
 	<description><%= projectDescription %></description>
 	<files>
 		<filename module="mod_slush_jmodule">mod_slush_jmodule.php</filename>
-		<folder>assets</folder>
 		<folder>language</folder>
 		<folder>tmpl</folder>
-		<filename>helper.php</filename>
 		<filename>mod_slush_jmodule.xml</filename>
 		<filename>index.html</filename>
 	</files>
