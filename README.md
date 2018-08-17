@@ -1,6 +1,6 @@
 # Slush Jmodule 
 
-[![npm version](https://img.shields.io/npm/v/slush-jmodule.svg)](https://www.npmjs.com/package/slush-jmodule) [![bitHound Score](https://www.bithound.io/github/welksonramos/slush-jmodule/badges/score.svg)](https://www.bithound.io/github/welksonramos/slush-jmodule) [![bitHound Dependencies](https://www.bithound.io/github/welksonramos/slush-jmodule/badges/dependencies.svg)](https://www.bithound.io/github/welksonramos/slush-jmodule/master/dependencies/npm) [![license](https://img.shields.io/npm/l/slush-jmodule.svg?style=flat)](https://raw.github.com/welksonramos/slush-jmodule/blob/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/slush-jmodule.svg)](https://www.npmjs.com/package/slush-jmodule) [![dependencies Status](https://david-dm.org/welksonramos/slush-jmodule/status.svg)](https://david-dm.org/welksonramos/slush-jmodule) [![license](https://img.shields.io/npm/l/slush-jmodule.svg?style=flat)](https://raw.github.com/welksonramos/slush-jmodule/blob/master/LICENSE)
 
 > A simple slush generator for modules Joomla
 
