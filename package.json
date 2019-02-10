@@ -5,7 +5,7 @@
   "main": "slushfile.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/welksonramos/slush-jmodule.git"
+    "url": "git+https://github.com/welksonramos/slush-jmodule.git"
   },
   "bugs": {
     "url": "https://github.com/welksonramos/slush-jmodule/issues"
@@ -18,19 +18,20 @@
     "joomla",
     "module"
   ],
-  "author": "Welkson Ramos <welksonr@hotmail.com>",
-  "license": {
-    "type": "MIT",
-    "url": "https://raw.github.com/welksonramos/slush-jmodule/LICENSE"
+  "author": {
+    "name": "Welkson Ramos",
+    "email": "welksonr@hotmail.com"
   },
+  "license": "MIT",
   "dependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-conflict": "^0.4.0",
-    "gulp-install": "^0.6.0",
+    "gulp-install": "^1.1.0",
     "gulp-regex-replace": "^0.2.3",
-    "gulp-rename": "^1.2.2",
-    "gulp-template": "^3.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-template": "^5.0.0",
     "iniparser": "^1.0.5",
-    "inquirer": "^0.11.0"
-  }
+    "inquirer": "^6.2.2"
+  },
+  "homepage": "https://github.com/welksonramos/slush-jmodule#readme"
 }
