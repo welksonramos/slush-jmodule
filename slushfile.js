@@ -2,31 +2,31 @@
 * slush-jmodule
 * https://github.com/welksonramos/slush-jmodule
 *
-* Copyright (c) 2015, Welkson Ramos
+* Copyright (c) 2015-present, Welkson Ramos
 * Licensed under the MIT license.
 */
 
 'use strict';
 
-var gulp = require('gulp'),
-install = require('gulp-install'),
-conflict = require('gulp-conflict'),
-template = require('gulp-template'),
-inquirer = require('inquirer'),
-rename = require('gulp-rename'),
-replace = require('gulp-regex-replace');
+const gulp = require('gulp');
+const install = require('gulp-install');
+const conflict = require('gulp-conflict');
+const template = require('gulp-template');
+const inquirer = require('inquirer');
+const rename = require('gulp-rename');
+const replace = require('gulp-regex-replace');
 
-function format(string){
-  var username = string ? string.toLowerCase() : '';
+const format = (string) => {
+  let username = string ? string.toLowerCase() : '';
   return username.replace(/\s/g, '');
 }
 
-var defaults = (function () {
-  var homeDir = process.env.Home || process.env.HOMEPATH || process.env.USERPROFILE,
-  workingDirName = process.cwd().split('/').pop().split('\\').pop(),
-  osUserName = homeDir && homeDir.split('/').pop() || 'root',
-  configFile = homeDir + '/.gitconfig',
-  user = {};
+const defaults = (() => {
+  let homeDir = process.env.Home || process.env.HOMEPATH || process.env.USERPROFILE;
+  let workingDirName = process.cwd().split('/').pop().split('\\').pop();
+  let osUserName = homeDir && homeDir.split('/').pop() || 'root';
+  let configFile = homeDir + '/.gitconfig';
+  let user = {};
 
   if (require('fs').existsSync(configFile)) {
     user = require('iniparser').parseSync(configFile).user;
@@ -39,17 +39,23 @@ var defaults = (function () {
   };
 })();
 
-var d = new Date(),
-year = d.getFullYear(),
-fullDate = d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate();
+const currentDateFormated = () => {
+	const date = new Date(),
+		day = date.getDate().toString(),
+		dayFormated = (day.length == 1) ? '0' + day : day,
+		month = (date.getMonth() + 1).toString(),
+		monthFormated = (month.length == 1) ? '0' + month : month,
+		yearFormated = date.getFullYear();
+	return yearFormated + '-' + monthFormated + '-' + dayFormated;
+}
 
-gulp.task('default', function (done) {
+gulp.task('default', (done) => {
 
   let prompts = [
     { type:'input', name: 'projectName', message: 'Project name', default: defaults.moduleName },
     { type:'input', name:'projectDescription', message:'Description' },
     {	type:'input',	name:'projectVersion', message:'Version', default:'1.0.0' },
-    {	type:'input',	name:'creationDate', message:'Creation Date', default: fullDate},
+    {	type:'input',	name:'creationDate', message:'Creation Date', default: currentDateFormated },
     {	type:'input', name:'authorName', message:'Author Name', default: defaults.username },
     {	type:'input',	name:'authorEmail', message:'Author E-mail', default: defaults.authorEmail },
     {type:'input', name:'authorURL', message:'Author URL'},
