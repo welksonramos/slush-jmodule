@@ -4,6 +4,8 @@
 
 > A simple slush generator for modules Joomla
 
+![demo](demo.gif)
+
 ## Getting Started
 
 Install `slush-jmodule` globally:
