@@ -32,4 +32,4 @@ $ slush jmodule
 
 ## License
 
-[MIT](LICENSE) &copy; Welkson Ramos
+Licensed under the MIT license
